@@ -37,14 +37,14 @@ st.header("Category's Profit Over Regions")
 
 pivot_table = pd.pivot_table(df , index = "Category" , columns = "Region" , values = "Profit" , aggfunc = sum )
 
-c1,c2 = st.columns([4,1])
+c4,c5 = st.columns([4,1])
 
 #heat map or bar plot to draw pivot table
-with c1:
+with c4:
     px2 = px.imshow(pivot_table)
     st.plotly_chart(px2)
     
     
-with c2:
+with c5:
     px3 = px.bar(data_frame = df , x = "Category" , y = "Profit" ,color = "Region",barmode = "group")
     st.plotly_chart(px3)

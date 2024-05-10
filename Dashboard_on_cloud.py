@@ -37,11 +37,11 @@ st.header("Category's Profit Over Regions")
 
 pivot_table = pd.pivot_table(df , index = "Category" , columns = "Region" , values = "Profit" , aggfunc = sum )
 
-c4,c5 = st.columns([4,1])
+c4,c5 = st.columns(2)
 
 #heat map or bar plot to draw pivot table
 with c4:
-    px2 = px.imshow(pivot_table)
+    px2 = px.imshow(pivot_table , color_continuous_scale=px.colors.diverging.RdBu)
     st.plotly_chart(px2)
     
     

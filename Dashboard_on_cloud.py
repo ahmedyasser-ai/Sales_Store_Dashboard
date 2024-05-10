@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-
+import numpy
 #reading our dataset
 df = pd.read_csv("new_sales_store_data.csv")
 

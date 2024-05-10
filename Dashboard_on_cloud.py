@@ -40,4 +40,4 @@ pivot_table = pd.pivot_table(df , index = "Category" , columns = "Region" , valu
 #heat map to draw pivot table
     
 px2 = px.bar(data_frame = df , x = "Category" , y = "Profit" ,color = "Region",barmode = "group")
-st.plotly_chart(px3)
+st.plotly_chart(px2)

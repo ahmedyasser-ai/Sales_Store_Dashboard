@@ -41,7 +41,7 @@ c1,c2 = st.columns([4,1])
 
 #heat map or bar plot to draw pivot table
 with c1:
-    px2 = px.imshow(pivot_table , color_continuous_scale=px.colors.diverging.RdBu)
+    px2 = px.imshow(pivot_table)
     st.plotly_chart(px2)
     
     

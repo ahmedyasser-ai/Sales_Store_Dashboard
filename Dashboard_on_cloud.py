@@ -37,10 +37,7 @@ pivot_table = pd.pivot_table(df , index = "Category" , columns = "Region" , valu
 
 
 
-#heat map or bar plot to draw pivot table
-
-px2 = px.imshow(pivot_table , color_continuous_scale=px.colors.diverging.RdBu)
-st.plotly_chart(px2)
+#heat map to draw pivot table
     
-px3 = px.bar(data_frame = df , x = "Category" , y = "Profit" ,color = "Region",barmode = "group")
+px2 = px.bar(data_frame = df , x = "Category" , y = "Profit" ,color = "Region",barmode = "group")
 st.plotly_chart(px3)
